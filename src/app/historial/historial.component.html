@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Contacto</th>
+      <th>Folio</th>
+      <th>Total</th>
+      <th>Documento</th>
+      <th>Borrar</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let item of documentos;">
+    <tr>
+      <th scope="row">{{item.id}}</th>
+      <td>{{item.nombre_contacto}}</td>
+      <td>{{item.folio}}</td>
+      <td>{{item.total}}</td>
+      <td><button type="button" class="btn btn-secondary" (click)="downloadPdf(item)">Generar Documento</button></td>
+     <td><button type="button" class="btn btn-danger" (click)="delete(item)" >Borrar</button></td>
+    </tr>
+  </tbody>
+</table>
